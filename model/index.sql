@@ -1,0 +1,17 @@
+CREATE TABLE admins(
+	id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
+	username text NOT NULL UNIQUE,
+	password text NOT NULL,
+	created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	updated_at TIMESTAMP DEFAULT NULL,
+	deleted_at TIMESTAMP DEFAULT NULL,
+	status BOOLEAN NOT NULL DEFAULT true
+);
+CREATE TABLE info(
+	id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
+	data TEXT NOT NULL,
+	created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	updated_at TIMESTAMP DEFAULT NULL,
+	deleted_at TIMESTAMP DEFAULT NULL,
+	status BOOLEAN NOT NULL DEFAULT true
+);
