@@ -91,7 +91,7 @@ app.post("/data", auth, async (req, res) => {
 	}
 });
 
-app.get("/data", auth, async (req, res) => {
+app.get("/data", async (req, res) => {
 	try {
 		const data = await pg(`
       SELECT * FROM info
